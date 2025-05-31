@@ -1,0 +1,46 @@
+frequencia =  [10,3,3,5,6,6]
+
+
+escolha = int(input('''
+Digite: 
+
+
+1 - Mostra o dado
+2 - Alterar o dado
+3 - Coletar
+4 - Analise das soma da Vendas
+5 - Localizar um registro 
+---
+'''))
+
+
+if escolha  ==  1:
+    print('dados:', frequencia)
+
+
+elif escolha  == 2:
+     novo_dado = int(input('digite o novo  dado'))
+     alterar = int(input('Digite a localização:'))
+     frequencia[alterar] = novo_dado
+     print(frequencia) 
+elif escolha  == 3:
+     dado =  int(input('Colete o dado da frequencia atraves do Indice'))
+     if dado in frequencia: 
+        print('Dado', dado)
+     else:
+        print('O dado não existe')
+
+
+elif escolha  == 4:
+     print('Soma',  sum(frequencia))
+
+
+elif escolha  == 5:
+    dado =  int(input('busca: '))
+    if dado in frequencia:
+        print('Dado', dado, 'no indice', frequencia.index(dado) )
+    else:
+        print('O dado não existe da frequência  ')    
+
+
+else:
